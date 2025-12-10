@@ -36,9 +36,46 @@ class Calculadora{
         }
             return resultado;
         }
+    
+    static division(){
+        let resultado = 1;
+        let numero = 0;
+        let cantidadTotaladividir = parseInt(prompt("ingrese la cantidad total de numeros a dividir: "));
+        for(let e = 0; e < cantidadTotaladividir; e++){
+            numero = parseInt(prompt("ingrese numero: "));
+            if(e === 0){
+                resultado = numero;
+            }
+            else{
+                resultado = resultado / numero;
+            }
+        }
+        return resultado;
+    }
+
+    static RaizCuadrada(){
+        let finalizado = false;
+        let resultado = 0;
+        while(finalizado == false){
+            let numero = Number(prompt("que numero desea saber su raiz cuadrada: "));
+            if(isNaN(numero)){
+                alert("ingrese un numero");
+                continue;
+            }
+
+            if(numero < 0){
+                alert("no se aceptan numeros negativos");
+                continue;
+            }
+
+            resultado = Math.sqrt(numero);
+            finalizado = true;
+        }
+        return resultado;
+    }
 }
 
 
 
-let operacion = Calculadora.multiplicacion();
+let operacion = Calculadora.RaizCuadrada();
 document.writeln(operacion);
