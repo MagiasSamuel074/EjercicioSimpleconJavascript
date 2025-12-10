@@ -32,12 +32,7 @@ class Calculadora{
         let cantidadTotalaMultiplicar = parseInt(prompt("digite cuantos numeros desea multiplicar: "));
         for(let j = 0; j < cantidadTotalaMultiplicar; j++){
             numero = parseInt(prompt("ingrese numero: "));
-            if(j === 0){
-                resultado = numero;
-            }
-            else{
                 resultado = resultado * numero;
-            }
         }
             return resultado;
         }
