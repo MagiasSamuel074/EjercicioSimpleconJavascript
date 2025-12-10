@@ -73,9 +73,26 @@ class Calculadora{
         }
         return resultado;
     }
+
+    static Potencia(){
+        let numero = parseInt(prompt("ingrese numero: "));
+        let NumeroPotencia = parseInt(prompt("ingrese potencia: "));
+        let resultado = numero;
+        for(let i = 0; i < NumeroPotencia; i++){
+            resultado = resultado * numero;
+        }
+        return resultado;
+    }
 }
 
+let opcMenu = prompt("que desea calcular: 1. Suma, 2. Resta, 3. Multiplicacion, 4. Division, 5. Raiz Cuadrada, 6. Potencia");
 
-
-let operacion = Calculadora.RaizCuadrada();
-document.writeln(operacion);
+switch(opcMenu){
+    case "1":
+        document.writeln(Calculadora.Suma());
+        break;
+    case "2":
+        document.writeln(Calculadora.Resta());
+    default:
+        alert("ingrese el identificador o numero de la operacion")
+}
